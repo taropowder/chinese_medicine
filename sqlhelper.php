@@ -1,6 +1,9 @@
 <?php
 $mp3_dir = "https://xxxxx/chinese_medicine/mp3/";
 $img_dir = "https://xxxxx/chinese_medicine/img/";
+$appid = "xxxxxxx";
+$secret = "xxxx";
+
     class sqlhelper{
         private $mysqli;
         private static $host="localhost";
