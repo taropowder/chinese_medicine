@@ -80,6 +80,10 @@ include "longinrequire.php";
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="api" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>API查看<span class="fa arrow"></span></a>
+                </li>
+
 
 
 

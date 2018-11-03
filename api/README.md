@@ -100,8 +100,21 @@ json的格式为
 ## get_username.php
 ### GET ?username={username}
 
-用于更新当前用户的用户名
+用于更新当前用户的用户名  
 需要在登陆之后请求一次
+
+```json
+{
+  "status": "success"
+}
+```
+
+## add_comment.php
+### GET ?comment={comment}&songid={songid}
+
+`comment` 为评论的内容  
+`songid` 为广播的id
+
 
 ```json
 {
