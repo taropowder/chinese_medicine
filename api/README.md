@@ -83,6 +83,32 @@ json的格式为
 这样就不用再用openid去找username   
 每次登陆的时候更新一次username
 
+
+## login.php
+
+### GET 参数 code = {code}
+
+会自动记录下用户的openid
+返回如下
+```json
+{
+  "session_key": "xxxxxxxxxxxxx",
+  "openid": "xxxxxxxxxxxxx"
+}
+```
+
+## get_username.php
+### GET ?username={username}
+
+用于更新当前用户的用户名
+需要在登陆之后请求一次
+
+```json
+{
+  "status": "success"
+}
+```
+
 ## NOTE：
 在单独播放一个广播时候希望请求一次`song.php`  
 这样会增加一次播放记录
