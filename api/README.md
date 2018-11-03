@@ -61,7 +61,28 @@ json的格式为
 ]
 ```
 
-详情见上，
+详情见上
+
+
+## get_comment.php
+
+### GET 参数 songid = {int}
+返回广播ID号为 {int} 的所有评论
+```json
+[
+  {
+    "content": "ascots",
+    "username": "123"
+  }
+]
+```
+`content`:评论内容  
+`username` : 评论人
+
+注：目前决定在用户登录时将用户的username存到数据库里  
+这样就不用再用openid去找username   
+每次登陆的时候更新一次username
+
 ## NOTE：
 在单独播放一个广播时候希望请求一次`song.php`  
 这样会增加一次播放记录
