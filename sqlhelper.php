@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai'   亚洲/上海
 $mp3_dir = "https://xxxxx/chinese_medicine/mp3/";
 $img_dir = "https://xxxxx/chinese_medicine/img/";
 $appid = "xxxxxxx";
