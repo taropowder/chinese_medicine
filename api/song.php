@@ -6,8 +6,6 @@
  * Time: 11:01 AM
  */
 include_once "../sqlhelper.php";
-$mp3_dir = "http://192.168.64.2/wechat/mp3/";
-$img_dir = "http://192.168.64.2/wechat/img/";
 
 $mysql = new sqlhelper();
 $sql = "SELECT id FROM song";

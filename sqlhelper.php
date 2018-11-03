@@ -1,4 +1,6 @@
 <?php
+$mp3_dir = "https://xxxxx/chinese_medicine/mp3/";
+$img_dir = "https://xxxxx/chinese_medicine/img/";
     class sqlhelper{
         private $mysqli;
         private static $host="localhost";
