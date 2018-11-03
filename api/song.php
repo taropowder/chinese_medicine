@@ -24,4 +24,6 @@ $mysql->execute_dml($sql);
 $sql = "SELECT * FROM song where id = '$id'";
 $res = $mysql->execute_dql($sql);
 $row = $res->fetch_assoc();
-echo json_encode($row);
+$row['mp3'] = $mp3_dir.$row['mp3'];
+$row['img'] = $img_dir.$row['img'];
+echo json_encode($row, JSON_UNESCAPED_SLASHES);

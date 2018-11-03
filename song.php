@@ -8,7 +8,7 @@
 include "base.php";
 include 'sqlhelper.php';
 $mysqli = new sqlhelper();
-if ($_POST['name']) {
+if (isset($_POST['name'])) {
     $time = date('Y-m-d H:i:s');
     $files = array('mp3', 'img');
     foreach ($files as $key) {
