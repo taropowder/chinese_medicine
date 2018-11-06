@@ -12,7 +12,6 @@ if (isset($_GET['username'])){
         include_once "../sqlhelper.php";
         $mysql = new sqlhelper();
         $sql = "UPDATE user SET username VALUES '$username'";
-
         if ($mysql->execute_dml($sql)){
             $array = array(
                 "status" => "success",

@@ -26,8 +26,8 @@ if (isset($_GET['code'])){
     $mysql = new sqlhelper();
     $sql_select = "SELECT id FROM user WHERE openid = '$openid'";
     $res = $mysql->execute_dql($sql_select);
-    if (!$res){
-        $sql = "INSERT INTO user (openid) VALUES ($openid)";
+    if ($res->num_rows == 0){
+        $sql = "INSERT INTO user (openid) VALUES ('$openid')";
         $mysql->execute_dml($sql);
         $res = $mysql->execute_dql($sql_select);
     }

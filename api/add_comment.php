@@ -17,15 +17,27 @@ if (isset($_GET['comment'])){
         if ($mysql->execute_dml($sql)){
             $array = array(
                 "status" => "success",
+                "detail" => "评论成功，请等待审核"
             );
         }else{
             $array = array(
-                "status" => "error",
+                "status" => "fail",
+                "detail" => "评论失败"
             );
         }
-        echo json_encode($array);
         $mysql->close_sql();
+    }else{
+        $array = array(
+            "status" => "fail",
+            "detail" => "您未登陆，请登陆后尝试"
+        );
     }
 
 
+}else {
+    $array = array(
+        "status" => "fail",
+        "detail" => "不能提交空"
+    );
 }
+echo json_encode($array, JSON_UNESCAPED_SLASHES);

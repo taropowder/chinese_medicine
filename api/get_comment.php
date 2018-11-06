@@ -9,7 +9,7 @@ if (isset($_GET['songid'])){
     include_once "../sqlhelper.php";
     $mysql = new sqlhelper();
     $id = intval($_GET['songid']);
-    $sql = "SELECT  comment.content, user.username FROM comment,user WHERE comment.songid = $id";
+    $sql = "SELECT  comment.content, user.username, comment_time FROM comment,user WHERE  user.id = comment.userid and comment.songid = $id";
     $res = $mysql->execute_dql($sql);
     $out_json = array();
     while ($row = $res->fetch_assoc()){
